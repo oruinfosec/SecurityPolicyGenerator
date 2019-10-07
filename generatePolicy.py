@@ -18,7 +18,7 @@ for TEMPLATE_FILE in list_of_directories:
     outputText = template.render(
         variable_dictionary
     ).encode('utf-8')
-    html_file = open(variable_dictionary.get('company')+'_'+TEMPLATE_FILE+'.md', 'wb')
+    html_file = open(variable_dictionary.get('company')+'_'+TEMPLATE_FILE, 'wb')
     html_file.write(outputText)
     html_file.close()
 print("Successfuly generated "+ variable_dictionary.get('company')+" security policies!")
